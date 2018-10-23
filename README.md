@@ -48,7 +48,7 @@
    This implementation was not added to the code, but i will provide you with a solution a thought it could work. First i will get the system timestamp and save it to the JobInstance that is defined, after that i will add the job_instance (included this thimestamp) to the queue. When this task becomes the first element in the queue, before showing the results, the timestamp will be checked. If this time has already passed, then the job will be executed, if not it will be added at the end of the queue again.
 
 3. The postpone problem:
-   To solve this i should change the Queue structure i am using at the moment. I would implement a class queue myself,that contains the functions of pop, push, find element by id, and remove element by id. So whe executing the postpone command with the corresponded id, i will use the function find element by id, and after finding that, remove that element from the queue. After this is completed, i would re use the function delay and pass to this the job_instance and the seconds that the postpone was required to.
+   To solve this i should change the Queue structure i am using at the moment. I would implement a class queue myself,that contains the functions of pop, push, find element by id, and remove element by id. So when executing the postpone command with the corresponded id, i will use the function find element by id, and after finding that, remove that element from the queue. After this is completed, i would re use the function delay and pass to this the job_instance and the seconds that the postpone was required to.
 
 ### Author
 Valentina Franchi
