@@ -1,6 +1,6 @@
-#Ruby Concurrent Execution Queue
+# Ruby Concurrent Execution Queue
 
-##Server
+### Server
 
 1. To start the server you should be located in te root project folder
 2. Run the following command : ruby server.rb
@@ -24,7 +24,7 @@
     c. rspec spec/hello_world_job_spec.rb
 
 
-##Client
+### Client
 
 1. To start the client or many you should use the following command: telnet localhost 2000
 2. The client can run the following commands once is connected to the server:
@@ -41,7 +41,7 @@
     f. perform_in seconds HelloMeJob first_name last_name
        This should return to the client > :id , this id is the one obtained by the job
 
-##Solutions to Bonus problems
+### Solutions to Bonus problems
 1. The Bonus problem i have included in the code is the one about the exception error. This could be tested with the ErrorJob class running the command: perform_now ErrorJob you will be able to test this functionality. It will print that the task, with its id, have failed 3 times. After that it will not be included in the queue anymore.
 
 2. The perform_at problem:
@@ -50,5 +50,5 @@
 3. The postpone problem:
    To solve this i should change the Queue structure i am using at the moment. I would implement a class queue myself,that contains the functions of pop, push, find element by id, and remove element by id. So whe executing the postpone command with the corresponded id, i will use the function find element by id, and after finding that, remove that element from the queue. After this is completed, i would re use the function delay and pass to this the job_instance and the seconds that the postpone was required to.
 
-##Author
+### Author
 Valentina Franchi
